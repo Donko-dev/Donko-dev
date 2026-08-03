@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPIRE DONKO | Hassane DONKO - Portfolio & CV</title>
+    <meta name="description" content="Portfolio professionnel, CV Trilingue et Écosystème applicatif de Hassane DONKO / EMPIRE DONKO">
+    <meta name="theme-color" content="#d4af37">
+    
+    <!-- FAVICON & ICON (Gold Trident 'M' Circle Canvas-generated Data URI) -->
+    <link rel="icon" id="favicon" type="image/png" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23111' stroke='%23d4af37' stroke-width='4'/><path d='M30 70 L30 35 L40 55 L50 35 L60 55 L70 35 L70 70 M30 35 L25 25 M70 35 L75 25 M50 35 L50 20' stroke='%23d4af37' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='18' r='3' fill='%23e5e4e2'/></svg>">
+
+    <!-- MANIFEST PWA EMBEDDED -->
+    <link rel="manifest" id="pwa-manifest">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0c;
+            --bg-card: #141419;
+            --text-main: #f0f0f5;
+            --text-muted: #a0a0b0;
+            --gold: #d4af37;
+            --diamond: #e5e4e2;
+            --border: #2a2a35;
+            --accent: #1e1e28;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* BANNER SVG INLINE */
+        .banner {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #050505 0%, #1a1a24 50%, #000000 100%);
+            border-bottom: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .banner-title {
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .banner-subtitle {
+            color: var(--diamond);
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* PROFILE HEADER */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo-container {
+            width: 90px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .profile-info h1 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .profile-info p {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .contact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: var(--accent);
+            border: 1px solid var(--border);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .badge:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* NAVIGATION TABS */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0 20px 0;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: var(--text-main);
+            background: var(--accent);
+        }
+
+        /* TAB CONTENT SECTIONS */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* CARDS & GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2, .card h3 {
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .card-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        li::before {
+            content: "◆";
+            color: var(--gold);
+            font-size: 0.7rem;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        /* LANGUAGE SELECTOR FOR CV */
+        .lang-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: var(--accent);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .lang-btn.active {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .pwa-status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 4px 10px;
+            background: var(--accent);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <svg class="banner-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon points="0,0 100,0 100,100" fill="#d4af37"/>
+            <polygon points="0,100 100,0 0,0" fill="#e5e4e2"/>
+        </svg>
+        <div class="banner-content">
+            <div class="banner-title">EMPIRE DONKO</div>
+            <div class="banner-subtitle">INNOVATION, LOGISTICS & SOFTWARE ENGINEERING</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- PROFILE CARD -->
+        <div class="profile-card">
+            <div class="logo-container">
+                <!-- SVG LOGO MAJESTIC: Trident in M with Gold & Diamond Circle -->
+                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <circle cx="50" cy="50" r="45" fill="#141419" stroke="#d4af37" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="41" fill="none" stroke="#e5e4e2" stroke-width="1.5" stroke-dasharray="4 2"/>
+                    <path d="M28 72 L28 35 L40 58 L50 38 L60 58 L72 35 L72 72" stroke="#d4af37" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <path d="M50 38 L50 20 M38 30 L38 22 M62 30 L62 22" stroke="#e5e4e2" stroke-width="3" stroke-linecap="round"/>
+                    <polygon points="50,14 46,20 54,20" fill="#d4af37"/>
+                    <polygon points="38,17 35,22 41,22" fill="#e5e4e2"/>
+                    <polygon points="62,17 59,22 65,22" fill="#e5e4e2"/>
+                </svg>
+            </div>
+            <div class="profile-info">
+                <h1>Hassane DONKO</h1>
+                <p>Développeur Logiciel & Spécialiste Systèmes | CEO L'EMPIRE DONKO</p>
+                <div class="contact-badges">
+                    <a href="mailto:hassanedonko9@gmail.com" class="badge">✉ hassanedonko9@gmail.com</a>
+                    <a href="tel:+2290196809106" class="badge">📞 +229 01 96 80 91 06</a>
+                    <span class="badge">📍 Cotonou, Bénin</span>
+                    <a href="https://github.com/Donko-dev" target="_blank" class="badge">🌐 GitHub</a>
+                    <a href="https://donko-dev.github.io/empirecode" target="_blank" class="badge">💼 Portfolio Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION TABS -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="openTab('portfolio')">📁 Portfolio & Projets</button>
+            <button class="tab-btn" onclick="openTab('cv')">📄 CV (FR / EN / DE)</button>
+            <button class="tab-btn" onclick="openTab('majestic')">👑 Projet MAJESTIC</button>
+            <button class="tab-btn" onclick="openTab('contact')">✉ Contact & Réseaux</button>
+        </div>
+
+        <!-- TAB 1: PORTFOLIO & PROJETS -->
+        <div id="portfolio" class="tab-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🚚 Smart Logistics</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Application web de gestion des flux logistiques, traçabilité et suivi de fret.</p>
+                    <ul>
+                        <li>Gestion autonome des expéditions et stocks</li>
+                        <li>Mode Offline-first avec sauvegarde locale</li>
+                    </ul>
+                    <br>
+                    <a href="https://donko-dev.github.io/smartlogistics/" target="_blank" class="card-link">Lancer Smart Logistics ➔</a>
+                </div>
+
+                <div class="card">
+                    <h3>📦 Donko Inventory</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Système d'inventaire et de suivi des stocks hors-ligne.</p>
+                    <ul>
+                        <li>Suivi fluide des entrées et sorties de marchandises</li>
+                        <li>Calculs automatisés des mouvements de stock</li>
+                    </ul>
+                    <br>
+                    <a href="https://donko-dev.github.io/DONKO-INVENTORY" target="_blank" class="card-link">Accéder à Donko Inventory ➔</a>
+                </div>
+
+                <div class="card">
+                    <h3>🧮 Kalcul Pro</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Outil de calcul opérationnel et d'estimation financière pour la gestion.</p>
+                    <ul>
+                        <li>Simulations financières directes</li>
+                        <li>Interface optimisée pour exécution rapide</li>
+                    </ul>
+                    <br>
+                    <a href="https://donko-dev.github.io/Kalcul-pro" target="_blank" class="card-link">Ouvrir Kalcul Pro ➔</a>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 Donko Ads & Outils WEB</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Suite de solutions logicielles métiers, génération de tickets Wi-Fi et conversion d'outils PWA.</p>
+                    <ul>
+                        <li>Tickets WiFi Zone automatisés</li>
+                        <li>E-commerce & Marketplace (DigiShop Africa)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: CV TRILINGUE -->
+        <div id="cv" class="tab-content">
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="switchLang('cv-fr')">Français</button>
+                <button class="lang-btn" onclick="switchLang('cv-en')">English</button>
+                <button class="lang-btn" onclick="switchLang('cv-de')">Deutsch</button>
+            </div>
+
+            <!-- CV FR -->
+            <div id="cv-fr" class="cv-lang-block">
+                <div class="card">
+                    <h2>Développeur Logiciel & Spécialiste Systèmes | Candidat Ausbildung Logistique</h2>
+                    <p><strong>Cotonou, Bénin</strong> | +229 01 96 80 91 06 | hassanedonko9@gmail.com</p>
+                    <br>
+                    <h3>🎯 PROFIL PROFESSIONNEL</h3>
+                    <p>Professionnel de l'informatique et développeur indépendant, passionné par l'optimisation des flux, la gestion des stocks et l'automatisation des processus. Concepteur de solutions logicielles métiers telles que <strong>Smart Logistics</strong> et d'outils "offline-first". Candidat motivé pour un parcours en <strong>Logistique / IT-Logistique</strong>, combinant rigueur méthodologique et maîtrise de l'automatisation.</p>
+                    <br>
+                    <h3>🛠 COMPÉTENCES CLÉS</h3>
+                    <ul>
+                        <li><strong>Logistique & Systèmes :</strong> Flux logistiques, suivi des stocks, traçabilité, calcul de coûts.</li>
+                        <li><strong>Développement Logiciel :</strong> JavaScript, HTML5/CSS3, Python, PWA Offline-first, APIs IA.</li>
+                        <li><strong>Langues :</strong> Français (Maternelle), Allemand (Niveau B1), Anglais (Professionnel).</li>
+                    </ul>
+                    <br>
+                    <h3>💼 EXPÉRIENCE PROFESSIONNELLE</h3>
+                    <p><strong>Développeur & Fondateur — EMPIRE DONKO</strong></p>
+                    <ul>
+                        <li>Conception de <strong>Smart Logistics</strong> : Suivi des flux et traçabilité de fret.</li>
+                        <li>Développement de <strong>Donko Inventory</strong> & <strong>Kalcul Pro</strong>.</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Consultant IT — WEBCRAFT HD</strong></p>
+                    <ul>
+                        <li>Mise en place de systèmes de contrôle d'accès réseau (Tickets WiFi Zone).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CV EN -->
+            <div id="cv-en" class="cv-lang-block" style="display:none;">
+                <div class="card">
+                    <h2>Software Developer & Systems Specialist | Logistics & IT Apprentice Candidate</h2>
+                    <p><strong>Cotonou, Benin</strong> | +229 01 96 80 91 06 | hassanedonko9@gmail.com</p>
+                    <br>
+                    <h3>🎯 PROFESSIONAL PROFILE</h3>
+                    <p>Results-driven IT Specialist and Software Developer focused on process optimization, inventory management, and automated workflow design. Creator of <strong>Smart Logistics</strong> and offline-first business tools. Motivated candidate for a <strong>Logistics / IT-Logistics Apprenticeship (Ausbildung)</strong>.</p>
+                    <br>
+                    <h3>🛠 KEY SKILLS</h3>
+                    <ul>
+                        <li><strong>Logistics & Process :</strong> Supply chain tracking, inventory control, data traceability, cost calculation.</li>
+                        <li><strong>Software Engineering :</strong> JavaScript, HTML5/CSS3, Python, PWAs, Gemini AI Integration.</li>
+                        <li><strong>Languages :</strong> French (Native), German (B1 Level), English (Professional).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CV DE -->
+            <div id="cv-de" class="cv-lang-block" style="display:none;">
+                <div class="card">
+                    <h2>Softwareentwickler & IT-Spezialist | Bewerber für eine Ausbildung im Bereich Logistik / IT-Logistik</h2>
+                    <p><strong>Cotonou, Benin</strong> | +229 01 96 80 91 06 | hassanedonko9@gmail.com</p>
+                    <br>
+                    <h3>🎯 LEBENSLAUF-PROFIL</h3>
+                    <p>Engagierter Softwareentwickler und IT-Spezialist mit ausgeprägtem Interesse an Prozessoptimierung, Warenwirtschaft und digitaler Logistik. Entwickler von <strong>Smart Logistics</strong> und Offline-First-Anwendungen. Motivierter Bewerber für eine <strong>Ausbildung im Bereich Logistik / IT-Logistik</strong> (B1 Deutschkenntnisse).</p>
+                    <br>
+                    <h3>🛠 KERNKOMPETENZEN</h3>
+                    <ul>
+                        <li><strong>Logistik & Warenwirtschaft :</strong> Logistikprozess-Optimierung, Inventarverwaltung, Fracht-Tracking.</li>
+                        <li><strong>Softwareentwicklung :</strong> JavaScript, Python, PWA, KI-Automatisierung.</li>
+                        <li><strong>Sprachen :</strong> Französisch (Muttersprache), Deutsch (B1), Englisch (Fließend).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: PROJET MAJESTIC -->
+        <div id="majestic" class="tab-content">
+            <div class="card">
+                <h2>👑 PROJET MAJESTIC (L'EMPIRE DONKO)</h2>
+                <p style="margin-bottom: 15px; color: var(--gold);"><strong>Architecture du Token & Roadmap des Tranches</strong></p>
+                <ul>
+                    <li><strong>Projet Principal :</strong> MAJESTIC (2 500 000 MAJ)</li>
+                    <li><strong>Listing & Roadmap :</strong> 2 200 000 000 pour listing répartis en 22 tranches (100 millions par tranche)</li>
+                    <li><strong>Projets Associés :</strong> RICH (1 000 000 000 tokens) & ITAF (55 000 000 000 tokens)</li>
+                    <li><strong>Direction :</strong> L'EMPIRE DONKO supervise l'ensemble des trois projets.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 4: CONTACT & NETWORKS -->
+        <div id="contact" class="tab-content">
+            <div class="card">
+                <h2>✉ Contact & Direction</h2>
+                <br>
+                <p><strong>Nom :</strong> Hassane DONKO</p>
+                <p><strong>Entité :</strong> L'EMPIRE DONKO</p>
+                <p><strong>Localisation :</strong> Agla, Cotonou, Bénin</p>
+                <p><strong>Téléphone :</strong> +229 01 96 80 91 06</p>
+                <p><strong>E-mails :</strong> hassanedonko9@gmail.com / empiredonko9@gmail.com</p>
+                <br>
+                <h3>🌐 Liens Web</h3>
+                <ul>
+                    <li><a href="https://donko-dev.github.io/empirecode" target="_blank" class="card-link">Portfolio Developer (empirecode)</a></li>
+                    <li><a href="https://github.com/Donko-dev" target="_blank" class="card-link">GitHub Donko-dev</a></li>
+                    <li><a href="https://donko-dev.github.io/smartlogistics/" target="_blank" class="card-link">Smart Logistics</a></li>
+                    <li><a href="https://donko-dev.github.io/DONKO-INVENTORY" target="_blank" class="card-link">Donko Inventory</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>© EMPIRE DONKO. Tous droits réservés. Application 100% Hors-ligne / Offline-First PWA.</p>
+            <div class="pwa-status" id="pwa-status">Mode Hors-Ligne Activé</div>
+        </footer>
+    </div>
+
+    <!-- SCRIPT EMBEDDED: APP LOGIC + PWA SERVICE WORKER + MANIFEST INLINE -->
+    <script>
+        // 1. EMBEDDED MANIFEST GENERATION (DATA URI)
+        const manifestData = {
+            "name": "EMPIRE DONKO - Hassane DONKO",
+            "short_name": "EMPIRE DONKO",
+            "start_url": "./",
+            "display": "standalone",
+            "background_color": "#0a0a0c",
+            "theme_color": "#d4af37",
+            "icons": [{
+                "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23111' stroke='%23d4af37' stroke-width='4'/><path d='M30 70 L30 35 L40 55 L50 35 L60 55 L70 35 L70 70 M30 35 L25 25 M70 35 L75 25 M50 35 L50 20' stroke='%23d4af37' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>",
+                "sizes": "192x192 512x512",
+                "type": "image/svg+xml"
+            }]
+        };
+        const manifestBlob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
+        document.getElementById('pwa-manifest').setAttribute('href', URL.createObjectURL(manifestBlob));
+
+        // 2. TAB NAVIGATION SYSTEM
+        function openTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            contents.forEach(content => content.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function switchLang(langId) {
+            const blocks = document.querySelectorAll('.cv-lang-block');
+            const btns = document.querySelectorAll('.lang-btn');
+            
+            blocks.forEach(b => b.style.display = 'none');
+            btns.forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(langId).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+
+        // 3. SERVICE WORKER EMBEDDED (BLOB SW FOR 100% OFFLINE FUNCTIONALITY)
+        if ('serviceWorker' in navigator) {
+            const swCode = `
+                const CACHE_NAME = 'empire-donko-v1';
+                self.addEventListener('install', (e) => {
+                    e.waitUntil(
+                        caches.open(CACHE_NAME).then((cache) => {
+                            return cache.addAll(['./']);
+                        })
+                    );
+                });
+                self.addEventListener('fetch', (e) => {
+                    e.respondWith(
+                        caches.match(e.request).then((res) => res || fetch(e.request))
+                    );
+                });
+            `;
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            const swUrl = URL.createObjectURL(blob);
+            
+            navigator.serviceWorker.register(swUrl).then(() => {
+                console.log('PWA Service Worker actif et prêt pour le mode hors connexion.');
+            }).catch(err => console.log('SW Info:', err));
+        }
+
+        // Online/Offline Status Indicator
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        function updateOnlineStatus() {
+            const statusEl = document.getElementById('pwa-status');
+            if (navigator.onLine) {
+                statusEl.textContent = "Connecté — Mode Synchro";
+                statusEl.style.color = "#4caf50";
+            } else {
+                statusEl.textContent = "Mode Hors-Ligne Activé (Local Cache)";
+                statusEl.style.color = "#d4af37";
+            }
+        }
+        updateOnlineStatus();
+    </script>
+</body>
+</html>
