@@ -153,3 +153,23 @@ A production-ready PWA Warehouse Management System built to streamline complex i
 * **Portfolio**: [donko-dev.github.io/empirecode/](https://donko-dev.github.io/empirecode/)
 
 </details>
+
+<br>
+
+<div align="center">
+
+<img src="donko.png" alt="EMPIRE CODE Footer Logo" width="100"/>
+
+<br><br>
+
+**EMPIRE CODE &copy; 2026 — Tous droits réservés / All rights reserved / Alle Rechte vorbehalten**  
+*Développeur Informatique Freelance & Expert IA*
+
+<br>
+
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-+229%2001%2096%2080%2091%2006-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/2290196809106)
+[![Email](https://img.shields.io/badge/Email-empiredonko@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:empiredonko@gmail.com)
+[![TikTok](https://img.shields.io/badge/TikTok-@donkodeutsch-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://tiktok.com/@donkodeutsch)
+[![Boutique](https://img.shields.io/badge/Boutique-EMPIRE%20CODE%20STORE-FF9900?style=for-the-badge&logo=shopify&logoColor=white)](https://empirecode.mychariow.co/)
+
+</div>
