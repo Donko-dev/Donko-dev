@@ -12,9 +12,10 @@
 ---
 
 <p align="center">
-  <a href="#-français">🇫🇷 Français</a> &nbsp;|&nbsp;
- <a href="#-deutsch">🇩🇪 Deutsch</a>
-&nbsp;|&nbsp;
+  <a href="#-deutsch">🇩🇪 Deutsch</a>
+  &nbsp;|&nbsp;
+ <a href="#-français">🇫🇷 Français</a> 
+  &nbsp;|&nbsp;
   <a href="#-english">🇬🇧 English</a> 
 </p>
 
@@ -182,7 +183,7 @@ A production-ready PWA Warehouse Management System built to streamline complex i
 
 <br><br>
 
-**EMPIRE CODE &copy; 2026 — Tous droits réservés / All rights reserved / Alle Rechte vorbehalten**  
+**EMPIRE CODE &copy; 2026 — Alle Rechte vorbehalten / Tous droits réservés / All rights reserved**  
 *Développeur Informatique Freelance & Expert IA*
 
 <br>
