@@ -1,3 +1,23 @@
+<p align="center">
+  <img src="donko.png" alt="EMPIRE CODE Logo" width="140"/><br><br>
+  <b>Hassane DONKO</b><br>
+
+<p align="center">
+  <a href="https://wa.me/2290196809106"><img src="https://img.shields.io/badge/WhatsApp-+229%2001%2096%2080%2091%2006-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+  <a href="mailto:empiredonko@gmail.com"><img src="https://img.shields.io/badge/Email-empiredonko@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://tiktok.com/@donkodeutsch"><img src="https://img.shields.io/badge/TikTok-@donkodeutsch-000000?style=for-the-badge&logo=tiktok&logoColor=white"/></a>
+  <a href="https://empirecode.mychariow.co/"><img src="https://img.shields.io/badge/Boutique-EMPIRE%20CODE%20STORE-FF9900?style=for-the-badge&logo=shopify&logoColor=white"/></a>
+</p>
+
+---
+
+<p align="center">
+  <a href="#-français">🇫🇷 Français</a> &nbsp;|&nbsp;
+ <a href="#-deutsch">🇩🇪 Deutsch</a>
+&nbsp;|&nbsp;
+  <a href="#-english">🇬🇧 English</a> 
+</p>
+
 # 👋 Hassane Donko | AI Tech Lead & Logistics Systems Architect
 *CEO — EMPIRE DONKO | Founder of TransTech Dynamic (RCCM RB/COT/24 A 104475)*
 
