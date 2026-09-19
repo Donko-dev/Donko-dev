@@ -1,6 +1,6 @@
 <p align="center">
   <img src="donko.png" alt="EMPIRE CODE Logo" width="140"/><br><br>
-  <b>Hassane DONKO</b><br>
+  <b>Hassane ZAKARI</b><br>
 
 <p align="center">
   <a href="https://wa.me/2290196809106"><img src="https://img.shields.io/badge/WhatsApp-+229%2001%2096%2080%2091%2006-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
