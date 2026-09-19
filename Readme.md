@@ -19,7 +19,7 @@
   <a href="#-english">🇬🇧 English</a> 
 </p>
 
-# 👋 Hassane Donko | AI Tech Lead & Logistics Systems Architect
+# 👋 Hassane ZAKARI | AI Tech Lead & Logistics Systems Architect
 *CEO — EMPIRE DONKO | Founder of TransTech Dynamic (RCCM RB/COT/24 A 104475)*
 
 ---
